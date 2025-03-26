@@ -9,7 +9,7 @@ const Result = () =>{
     const [input,setInput] = useState('');
    
     const submithandler = (e) =>{
-        
+        //on backend
     }
 
     return(

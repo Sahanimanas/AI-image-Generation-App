@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 export const AppContext = createContext()
 
 const AppContextprovider = (props) =>{
-    const[user , setUser]  = useState(null); // check form user login or not
+    const[user , setUser]  = useState(false); // check form user login or not
 
     const value = {
         user,setUser
