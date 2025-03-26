@@ -7,10 +7,13 @@ const Result = () =>{
     const [isImageloaded,setIsImageloaded] = useState(false);
     const [loading,setLoading] = useState(false);
     const [input,setInput] = useState('');
-
+   
+    const submithandler = (e) =>{
+        
+    }
 
     return(
-        <form className='flex flex-col min-h-[90vh] justify-center items-center'>
+        <form onSubmit={submithandler} className='flex flex-col min-h-[90vh] justify-center items-center'>
         <div>
         <div className='relative'>
             <img src={assets.sample_img_1} alt="" className='max-w-sm rounded' />
