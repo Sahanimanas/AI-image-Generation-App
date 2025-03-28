@@ -5,9 +5,9 @@ export const AppContext = createContext()
 
 const AppContextprovider = (props) =>{
     const[user , setUser]  = useState(false); // check form user login or not
-
+    const [showLogin,setShowLogin] = useState(false);
     const value = {
-        user,setUser
+        user,setUser,setShowLogin,showLogin
     }
 
     return (
