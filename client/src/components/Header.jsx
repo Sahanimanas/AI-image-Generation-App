@@ -1,5 +1,6 @@
 import React from 'react'
 import {assets} from '../assets/assets'
+import {motion} from 'framer-motion'
 const Header = () => {
   return (
     <div className='flex flex-col justify-center mt-20 items-center text-center my-20'>
@@ -30,5 +31,5 @@ const Header = () => {
     </div>
   ) 
 }
-
+ 
 export default Header
