@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className=' relative rounded-full p-7 h-12  top-3    flex items-center justify-between text-center align-center py-4 bg-gradient-to-b
-     from-blue-300 to-orange-100'>
+     from-blue-100 to-orange-100'>
        <Link
        to='/'> <img src={assets.logo} alt=" " className='w-28 sm:w-32 lg:w-40' />
        </Link>
