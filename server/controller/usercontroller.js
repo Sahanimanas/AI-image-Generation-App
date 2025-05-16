@@ -7,7 +7,7 @@ import 'dotenv/config'
 const  signup = async(req,res)=>{
     try{
         const {email,name,password} = req.body;
-         
+        
         if(!email || !name || !password){
             return res.status(500).json({
                 success:false,
@@ -38,7 +38,7 @@ const  login = async(req,res) =>{
     const {email,password} = req.body;
   
    const user = await usermodel.findOne({email})
-   console.log(user)
+   
    if(!user){
    return res.send("please signup")
    }
@@ -65,12 +65,12 @@ const  usercredits = async(req,res) =>{
                res.status(200).json({
                 success:true,
                 credits:user.creditBalance,
-                name:user.name
+                user:{name:user.name}
               })
     }
     catch(err){
-        console.log(err)
-        res.send(err)
+     
+        res.send("line"+err)
     }
 }
 export {signup,login,usercredits}

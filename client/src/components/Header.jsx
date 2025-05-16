@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <motion.div
       className="flex flex-col justify-center mt-20 items-center text-center my-20"
-      initial={{ opacity: 0.3, y: 100 }}
-      transistion={{ duration: 1 }}
+      initial={{ opacity: 0.2, y: 100 }}
+      transistion={{ delay:0,duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
@@ -25,7 +25,7 @@ const Header = () => {
         className="inline-flex  text-stone-500 border border-neutral-500 py-1 gap-2 bg-white px-6 rounded-full mx-auto justify-center text-xs sm:text-sm "
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transistion={{ delay: 0.2, duration: 0.8 }}
+        transistion={{ delay: 1, duration: 0.8 }}
       >
         <p>Best text to image generator</p>
         <img src={assets.star_icon} alt="" />
@@ -46,9 +46,9 @@ const Header = () => {
 
       <motion.p
         className="text-center max-w-xl mx-auto mt-5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transistion={{ delay: 0.6, duration: 2 }}
+        initial={{ opacity: 0,y:20 }}
+        animate={{ opacity: 1,y:0 }}
+        transistion={{ delay: 0.6, duration: 0.8 }}
       >
         Unleash your creativity with AI. Turn your imagination into visual art
         ib secinds - just type, and watch the magic happen
@@ -59,8 +59,9 @@ const Header = () => {
         onClick={onclickHandler}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transistion={{ delay: 0.8, duration: 20 }}
-        whileHover={{ scale: 1.06, duration: 1 }}
+        transistion={{default: {duration:0.5},opacity:{delay:0.8,duration:1} }}
+        whileHover={{ scale: 1.05}}
+        whileTap={{scale:0.95}}
       >
         Generate Images
         <img src={assets.star_group} alt="" className="h-6" />
@@ -70,13 +71,14 @@ const Header = () => {
         className="flex flex-wrap justify-center mt-16 gap-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transistion={{ delay: 0.8, duration: 20 }}
+        transistion={{ delay: 1, duration: 1}}
       >
         {Array(6)
           .fill("")
           .map((item, index) => {
             return (
-              <img
+              <motion.img
+              whileHover={{scale:1.05,duration:0.1}}
                 className="rounded hover:scale-105 transition-all duration-300 cursor-pointer mx-sm:w-10 "
                 src={
                   index % 2 === 0 ? assets.sample_img_1 : assets.sample_img_2
@@ -87,7 +89,11 @@ const Header = () => {
             );
           })}
       </div>
-      <p className="mt-2 text-neutral-600">Generated Images from imagify</p>
+      <motion.p
+      initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transistion={{ delay: 1.2, duration: 0.8}}
+      className="mt-2 text-neutral-600">Generated Images from imagify</motion.p>
     </motion.div>
   );
 };

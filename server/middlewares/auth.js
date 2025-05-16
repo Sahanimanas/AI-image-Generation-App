@@ -4,21 +4,25 @@ import 'dotenv/config'
 
 const userauth = async(req,res,next) =>{
     const {token} = req.headers;
-    console.log(token)
+    
      if(!token){
         return   res.send("please register")
      } 
+   
     try{
 
         const tokendecode = jwt.verify(token,process.env.secret_key);  
-        
-        req.body.userid = tokendecode.id;
-        
+            if (!req.body) {
+            req.body = {};
+        }
+
+        req.body.userid = String(tokendecode.id)
+      console.log(req.body.userid)
         next();
 
     } catch(err){
       
-        res.send(err)
+        res.send("line 1" + err.message)
     }
 
 
