@@ -14,7 +14,8 @@ const AppContextprovider = (props) =>{
      const [token,setToken] = useState(localStorage.getItem('token'));
      const [credit,setCredit] = useState()
       const navigate = useNavigate()
-     const loadcreditdata = async () => {
+     
+      const loadcreditdata = async () => {
          try{
             const {data} = await axios.get(backend_url + '/api/user/credits', {headers:{token}});
            
@@ -23,7 +24,7 @@ const AppContextprovider = (props) =>{
                  setUser(data.user)
                 toast.success(credit)
             }else{
-                toast.error('no data')
+                toast.error('Please login!')
             }
 
          }catch(error){
@@ -51,11 +52,12 @@ const AppContextprovider = (props) =>{
         toast.error(err.message)
         }
       }
-
+ 
      const logout = ()=>{
          localStorage.removeItem('token');
          setUser(null);
          setToken('')
+         navigate('/');
      }
 
     

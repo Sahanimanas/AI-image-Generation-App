@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 function App() {
- const {setShowLogin,showLogin} = useContext(AppContext);
+ const {setShowLogin,user,showLogin} = useContext(AppContext);
   
   return (
     // for complete app css
@@ -25,7 +25,9 @@ function App() {
       <Routes>
 
         <Route path = '/' element = {  <Home/>}/>
-        <Route path = '/result' element = { <Result/>}/>
+        {  user && <Route path = '/result' element = { <Result/>}/>}
+        
+       
         <Route path = '/buy' element = {<BuyCredit/>} />
     
       </Routes>

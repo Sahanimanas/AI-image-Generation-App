@@ -37,14 +37,14 @@ const Login =  () => {
         setUser(data.user)
         localStorage.setItem('token',data.token);
         setShowLogin(false)
-       alert(data.success)
+       toast.success('Entered')
      }
      else{
-        toast.error(data.message)
+       
       } 
      }
     } catch(error){
-      toast.error(error.message)
+      
     }
     }
     // console.log(backend_url+'/api/user/register')
