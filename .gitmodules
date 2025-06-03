@@ -1,0 +1,6 @@
+[submodule "server_main"]
+	path = server_main
+	url = https://github.com/Sahanimanas/server_branch
+[submodule "client_main"]
+	path = client_main
+	url = https://github.com/Sahanimanas/client_branch
