@@ -12,7 +12,7 @@ const Description = () => {
         <p  className='text-gray-500 mb-8'>Turn Imagination into visuals</p>
     
     <div className='flex flex-col gap-5 md:gap-14 md:flex-row sm:justify-center sm:items-center'>
-        <img src={assets.sample_img_1} className='w-80 xl:w-96 rounded-lg ' alt="" />
+        <img src={assets.sample3} className='w-80 xl:w-96 rounded-lg ' alt="" />
         <div>
             <h2 className='text-3xl font-medium max-w-lg mb-4'>Introducing  the Ai-Powered text to Imagr generator</h2>
                <p className='text-gray-600 mb-4'>

@@ -5,8 +5,9 @@ import instagram_icon from './instagram_icon.svg'
 import twitter_icon from './twitter_icon.svg'
 import star_icon from './star_icon.svg'
 import rating_star from './rating_star.svg'
-import sample_img_1 from './sample_img_1.png'
-import sample_img_2 from './sample_img_2.png'
+import sample_img_1 from './sample_img_1.png.webp'
+import sample_img_2 from './sample_img_2.png.webp'
+import sample3 from './sample3.webp'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
 import step_icon_1 from './step_icon_1.svg'
@@ -28,7 +29,7 @@ export const assets = {
     star_icon,
     rating_star,
     sample_img_1,
-    sample_img_2,
+    sample_img_2,sample3,
     email_icon,
     lock_icon,
     cross_icon,
